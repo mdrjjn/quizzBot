@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="quizzBot:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/quizzBot_jar</output-path>
+    <root id="archive" name="quizzBot.jar">
+      <element id="module-output" name="quizzBot" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/telegrambots-3.3-jar-with-dependencies.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
