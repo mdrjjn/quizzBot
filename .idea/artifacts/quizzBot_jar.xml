@@ -4,6 +4,9 @@
     <root id="archive" name="quizzBot.jar">
       <element id="module-output" name="quizzBot" />
       <element id="extracted-dir" path="$PROJECT_DIR$/telegrambots-3.3-jar-with-dependencies.jar" path-in-jar="/" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      </element>
     </root>
   </artifact>
 </component>

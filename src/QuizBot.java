@@ -1,11 +1,21 @@
 /**
  * Created by drmax on 9/26/17.
  */
-
+// importing bot libraries
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
+
+//importing Mongo DB libraries
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
+import org.bson.Document;
+import org.json.JSONObject;
+
 
 public class QuizBot extends TelegramLongPollingBot {
 
@@ -22,7 +32,7 @@ public class QuizBot extends TelegramLongPollingBot {
                     .setChatId(chat_id)
                     .setText(message_text);
             try {
-                sendMessage(message); // Sending our message object to user
+                execute(message); // Sending our message object to user
             } catch (TelegramApiException e) {
                 e.printStackTrace();
             }
