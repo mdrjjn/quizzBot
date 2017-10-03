@@ -22,6 +22,10 @@ public class QuizBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
 
+        //connecting to Mongo
+        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017"));
+
+
         // We check if the update has a message and the message has text
         if (update.hasMessage() && update.getMessage().hasText()) {
             // Set variables
